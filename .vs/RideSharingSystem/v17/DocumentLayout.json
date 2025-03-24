@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\pages\\driverpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:pages\\driverpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\interfaces\\irideable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:interfaces\\irideable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\pages\\authpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:pages\\authpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\pages\\passengerpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:pages\\passengerpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:models\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\services\\rideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +23,20 @@
       "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\interfaces\\irideable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:interfaces\\irideable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\pages\\authpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:pages\\authpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\pages\\driverpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:pages\\driverpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|c:\\users\\lihlumise njani\\desktop\\c# project\\ridesharingsystem\\pages\\passengerpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF626CF-5977-2D76-791C-15C4B0D8AC17}|RideSharingSystem.csproj|solutionrelative:pages\\passengerpages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,21 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthPages.cs",
-              "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\AuthPages.cs",
-              "RelativeDocumentMoniker": "Pages\\AuthPages.cs",
-              "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\AuthPages.cs",
-              "RelativeToolTip": "Pages\\AuthPages.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwCoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T12:04:58.939Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -63,44 +58,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Ride.cs",
+              "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Models\\Ride.cs",
+              "RelativeDocumentMoniker": "Models\\Ride.cs",
+              "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Models\\Ride.cs",
+              "RelativeToolTip": "Models\\Ride.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T12:48:35.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Models\\Wallet.cs",
+              "RelativeDocumentMoniker": "Models\\Wallet.cs",
+              "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Models\\Wallet.cs",
+              "RelativeToolTip": "Models\\Wallet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T12:48:30.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthPages.cs",
+              "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\AuthPages.cs",
+              "RelativeDocumentMoniker": "Pages\\AuthPages.cs",
+              "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\AuthPages.cs",
+              "RelativeToolTip": "Pages\\AuthPages.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAhwCIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T12:04:58.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DriverPages.cs",
               "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\DriverPages.cs",
               "RelativeDocumentMoniker": "Pages\\DriverPages.cs",
               "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\DriverPages.cs",
               "RelativeToolTip": "Pages\\DriverPages.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAowD8AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T11:21:22.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Services\\AuthService.cs",
               "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAIwKUAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:21:14.511Z"
+              "WhenOpened": "2025-03-24T10:21:14.511Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "IRideable.cs",
               "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Interfaces\\IRideable.cs",
               "RelativeDocumentMoniker": "Interfaces\\IRideable.cs",
               "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Interfaces\\IRideable.cs",
               "RelativeToolTip": "Interfaces\\IRideable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:11:34.08Z"
+              "WhenOpened": "2025-03-24T10:11:34.08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "PassengerPages.cs",
               "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Pages\\PassengerPages.cs",
               "RelativeDocumentMoniker": "Pages\\PassengerPages.cs",
@@ -108,33 +144,32 @@
               "RelativeToolTip": "Pages\\PassengerPages.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:07:11.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T10:07:11.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "RideService.cs",
               "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Services\\RideService.cs",
               "RelativeDocumentMoniker": "Services\\RideService.cs",
               "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Services\\RideService.cs",
               "RelativeToolTip": "Services\\RideService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAmwD8AAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:04:57.911Z"
+              "WhenOpened": "2025-03-24T10:04:57.911Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:03:34.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T10:03:34.493Z"
             }
           ]
         }

@@ -15,9 +15,9 @@ namespace RideSharingSystem.Services
         private List<User> _users = new List<User>();
         private List<Passenger> _passengers = new List<Passenger>();
         private List<Driver> _drivers = new List<Driver>();
-        private string _usersFileName = "Users.json";
-        private string _passengersFileName = "passengers.json";
-        private string _driversFileName = "drivers.json";
+        private readonly string _usersFileName = "Users.json";
+        private readonly string _passengersFileName = "passengers.json";
+        private readonly string _driversFileName = "drivers.json";
 
 
         private static AuthService _instance = new AuthService();

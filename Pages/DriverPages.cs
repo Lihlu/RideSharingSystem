@@ -61,7 +61,7 @@ namespace RideSharingSystem.Pages
                     {
                         ViewEarningsPage(driver);
                     }
-                    else if (selectedIndex == 6)
+                    else if (selectedIndex == 4)
                     {
                         AuthService.GetInstance().Logout();
                     }
@@ -157,9 +157,7 @@ namespace RideSharingSystem.Pages
                     break;
                 }
             }
-
         }
-
         public static void ViewEarningsPage(Driver driver)
         {
             Console.WriteLine($"Earnings: R{driver.Earnings}");
