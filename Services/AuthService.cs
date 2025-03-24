@@ -159,5 +159,13 @@ namespace RideSharingSystem.Services
             }
             SaveData();
         }
+
+        public void DeductFunds(string email, double amount)
+        {
+            LoadData();
+            Passenger result = _passengers.FirstOrDefault(p => p.Email == email)!;
+            result!.Wallet -= amount;
+            SaveData();
+        }
     }
 }

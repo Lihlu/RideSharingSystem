@@ -8,8 +8,9 @@ using RideSharingSystem.Services;
 
 namespace RideSharingSystem.Pages
 {
-    class DriverPages
+    static class DriverPages
     {
+        // Showing the driver's main menu
         public static void MainMenu(Driver driver)
         {
             string[] menuOptions = { "View Available Ride Requests", "Accept a Ride", "Complete a Ride", "View Earnings", "Logout" };
@@ -51,11 +52,10 @@ namespace RideSharingSystem.Pages
                     if (selectedIndex == 0)
                     {
                         ViewAvailableRequestsPage(driver);
-
                     }
                     else if (selectedIndex == 2)
                     {
-                        CompleteRidePage();
+                        CompleteRidePage(driver);
                     }
                     else if (selectedIndex == 3)
                     {
@@ -77,11 +77,11 @@ namespace RideSharingSystem.Pages
             List<Ride> requests = RideService.GetInstance().GetRequests();
             int selectedIndex = 0;
 
-
-
             while (true)
             {
                 Console.Clear();
+                Console.WriteLine($"Hello, {driver.Name}");
+                Console.WriteLine("Please use the up and down arrow keys to navigate, the 'Enter' to accept a ride\n");
 
                 for (int i = 0; i < requests.Count; i++)
                 {
@@ -116,16 +116,16 @@ namespace RideSharingSystem.Pages
 
         }
 
-        public static void CompleteRidePage()
+        public static void CompleteRidePage(Driver driver)
         {
             List<Ride> ongoing = RideService.GetInstance().GetOngoingRides();
             int selectedIndex = 0;
 
-
-
             while (true)
             {
                 Console.Clear();
+                Console.WriteLine($"Hello, {driver.Name}");
+                Console.WriteLine("Please use the up and down arrow keys to navigate, the 'Enter' to complete a ride\n");
 
                 for (int i = 0; i < ongoing.Count; i++)
                 {

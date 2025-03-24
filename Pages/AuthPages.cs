@@ -8,67 +8,79 @@ using RideSharingSystem.Services;
 
 namespace RideSharingSystem.Pages
 {
-    class AuthPages
+    static class AuthPages
     {
         public static void LoginPage()
         {
-            Console.Clear();
-            Console.Write("Please enter your email: ");
-            string email = Console.ReadLine();
-            Console.Write("Please enter your password: ");
-            string password = Console.ReadLine();
-
-            if (email != null && password != null)
+            try
             {
-                User user = AuthService.GetInstance().Login(email, password);
+                Console.Clear();
+                Console.Write("Please enter your email: ");
+                string? email = Console.ReadLine();
+                Console.Write("Please enter your password: ");
+                string? password = Console.ReadLine();
 
-                if (user != null)
+                if (email != null && password != null)
                 {
-                    if (user.Role == "Passenger")
+                    User user = AuthService.GetInstance().Login(email, password);
+
+                    if (user != null)
                     {
-                        PassengerPages.MainMenu(user as Passenger);
-                    }
-                    else
-                    {
-                        DriverPages.MainMenu(user as Driver);
+                        if (user.Role == "Passenger")
+                        {
+                            PassengerPages.MainMenu(user as Passenger);
+                        }
+                        else
+                        {
+                            DriverPages.MainMenu(user as Driver);
+                        }
                     }
                 }
-
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
+        // Showing the ragistration screen
         public static void RegistrationPage(string role)
         {
-            Console.Clear();
-            Console.WriteLine($"Register as a {role}\n");
-            Console.Write("Please enter your name: ");
-            string name = Console.ReadLine();
-            Console.Write("Please enter you email address: ");
-            string email = Console.ReadLine();
-            Console.Write("Please create a password: ");
-            string password = Console.ReadLine();
-            Console.Write("Please confirm your password: ");
-            string confirmPassword = Console.ReadLine();
-
-
-            if (password == confirmPassword)
+            try
             {
+                Console.Clear();
+                Console.WriteLine($"Register as a {role}\n");
+                Console.Write("Please enter your name: ");
+                string name = Console.ReadLine()!;
+                Console.Write("Please enter you email address: ");
+                string email = Console.ReadLine()!;
+                Console.Write("Please create a password: ");
+                string password = Console.ReadLine()!;
+                Console.Write("Please confirm your password: ");
+                string confirmPassword = Console.ReadLine()!;
 
-                if (role == "Passenger")
+                if (password == confirmPassword)
                 {
-                    Passenger passenger = new Passenger(name, email, password, 100.00);
-                    AuthService.GetInstance().RegisterPassenger(passenger);
+                    if (role == "Passenger")
+                    {
+                        Passenger passenger = new Passenger(name, email, password, 100.00);
+                        AuthService.GetInstance().RegisterPassenger(passenger);
 
+                    }
+                    else if (role == "Driver")
+                    {
+                        Driver driver = new Driver(name, email, password);
+                        AuthService.GetInstance().RegisterDriver(driver);
+                    }
                 }
-                else if (role == "Driver")
+                else
                 {
-                    Driver driver = new Driver(name, email, password);
-                    AuthService.GetInstance().RegisterDriver(driver);
+                    Console.WriteLine("Password do not match");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Password do not match");
+                Console.WriteLine(ex.Message);
             }
         }
     }

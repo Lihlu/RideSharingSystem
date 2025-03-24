@@ -8,17 +8,16 @@ using RideSharingSystem.Services;
 
 namespace RideSharingSystem.Pages
 {
-    class PassengerPages
+    static class PassengerPages
     {
         public static void MainMenu(Passenger passenger)
         {
-            string[] menuOptions = { "Request a Ride (Enter pickup & drop-off location)", "View Wallet Balance", "View Ride History", "Rate a Driver", "Logout" };
+            string[] menuOptions = { "Request a Ride (Enter pickup & drop-off location)", "View Wallet Balance", "View Ride History", "Logout" };
             int selectedIndex = 0;
 
             while (true)
             {
                 Console.Clear();
-
                 Console.WriteLine($"Hello, {passenger.Name}");
                 Console.WriteLine("Please use the up and down arrow keys to navigate, the 'Enter' to select\n");
 
@@ -60,13 +59,12 @@ namespace RideSharingSystem.Pages
                     }
                     else if (selectedIndex == 2)
                     {
-                        ViewRideHistoryScreen(passenger.Email);
+                        ViewRideHistoryScreen(passenger);
                     }
-                    else if (selectedIndex == 4)
+                    else if (selectedIndex == 3)
                     {
                         AuthService.GetInstance().Logout();
                     }
-                    Console.Write("Goodbye");
                     break;
                 }
             }
@@ -74,6 +72,7 @@ namespace RideSharingSystem.Pages
 
         public static void RequestRideScreen(Passenger passenger)
         {
+            Console.WriteLine("Request a ride\n");
             try
             {
                 Console.Write("Please enter your pick up location: ");
@@ -90,6 +89,7 @@ namespace RideSharingSystem.Pages
                 if (passenger.Wallet >= price)
                 {
                     RideService.GetInstance().RequestRide(passenger.Email, pickUpLocation!, dropOffLocation!, kms);
+                    AuthService.GetInstance().DeductFunds(passenger.Email, price);
                     Console.WriteLine("Your ride has been requested");
                 }
                 else
@@ -104,8 +104,12 @@ namespace RideSharingSystem.Pages
             }
         }
 
+        // Viewing Passengers wallet
+        // Passenger has the option to make a deposit
         public static void ViewWalletScreen(Passenger passenger)
         {
+            Console.WriteLine($"Viewing {passenger.Name}\'s Wallet\n");
+
             try
             {
 
@@ -114,16 +118,12 @@ namespace RideSharingSystem.Pages
                 Console.WriteLine("Would you like to make a deposit? \n1. Yes \n2. No");
                 string? response = Console.ReadLine();
 
-                if (response != null)
+                if (response != null && response == "1")
                 {
-                    if (response == "1")
-                    {
+                    Console.Write("Please enter the amount you wish to deposit: ");
+                    double depositAmount = Convert.ToDouble(Console.ReadLine());
 
-                        Console.Write("Please enter the amount you wish to deposit: ");
-                        double depositAmount = Convert.ToDouble(Console.ReadLine());
-
-                        AuthService.GetInstance().Deposit(depositAmount, passenger.Email);
-                    }
+                    AuthService.GetInstance().Deposit(depositAmount, passenger.Email);
                 }
             }
             catch (Exception e)
@@ -132,14 +132,19 @@ namespace RideSharingSystem.Pages
             }
         }
 
-        public static void ViewRideHistoryScreen(string passengerEmail)
+        // Displaying passenger ride history
+        public static void ViewRideHistoryScreen(Passenger passenger)
         {
-            List<Ride> rideHistory = RideService.GetInstance().GetRideHistory(passengerEmail);
+            List<Ride> rideHistory = RideService.GetInstance().GetRideHistory(passenger.Email);
+
+            Console.WriteLine($"Viewing {passenger.Name}\'s ride history");
 
             foreach (Ride ride in rideHistory)
             {
                 Console.WriteLine($"From: {ride.PickUpLocation}, To: {ride.DropOffLocation} ");
             }
+
+            Console.WriteLine("End of List");
         }
     }
 }
