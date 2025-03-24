@@ -16,7 +16,12 @@ RideSharingSystem is a platform for passengers to request rides between location
 - **View and accept available requests**: Drivers can view and accept available ride requests.
 - **Complete ongoing rides**: Drivers can mark ongoing rides as completed.
 - **View earnings**: Passengers can view their earnings.
+  
+### Prerequisites
 
+Make sure you have the following installed:
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download)
+- 
 - ### Installation
 
 1. Clone the repository:
