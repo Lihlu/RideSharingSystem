@@ -9,7 +9,7 @@ namespace RideSharingSystem.Interfaces
 {
     interface IRideable
     {
-        void RequestRide(string passengerEmail, string pickUpLocation, string dropOffLocation);
+        void RequestRide(string passengerEmail, string pickUpLocation, string dropOffLocation, int kms);
         void AcceptRide(Driver driver, int rideId);
         void CompleteRide(int rideId);
     }

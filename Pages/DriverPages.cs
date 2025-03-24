@@ -18,6 +18,8 @@ namespace RideSharingSystem.Pages
             while (true)
             {
                 Console.Clear();
+                Console.WriteLine($"Hello, {driver.Name}");
+                Console.WriteLine("Please use the up and down arrow keys to navigate, the 'Enter' to select\n");
 
                 for (int i = 0; i < menuOptions.Length; i++)
                 {

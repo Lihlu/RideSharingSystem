@@ -37,7 +37,6 @@ while (true)
         if (selectedIndex == 0)
         {
             AuthPages.RegistrationPage("Passenger");
-
         }
         else if (selectedIndex == 1)
         {
@@ -47,7 +46,6 @@ while (true)
         {
             AuthPages.LoginPage();
         }
-        Console.Write("Goodbye");
         break;
     }
 }

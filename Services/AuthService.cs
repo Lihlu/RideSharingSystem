@@ -15,7 +15,6 @@ namespace RideSharingSystem.Services
         private List<User> _users = new List<User>();
         private List<Passenger> _passengers = new List<Passenger>();
         private List<Driver> _drivers = new List<Driver>();
-        private static User? _currentUser;
         private string _usersFileName = "Users.json";
         private string _passengersFileName = "passengers.json";
         private string _driversFileName = "drivers.json";
@@ -32,11 +31,7 @@ namespace RideSharingSystem.Services
             return _instance;
         }
 
-        public static User? GetCurrentUser()
-        {
-            return _currentUser;
-        }
-
+        // Createing a passenger account
         public void RegisterPassenger(Passenger passenger)
         {
             LoadData();
@@ -52,6 +47,7 @@ namespace RideSharingSystem.Services
             Console.WriteLine("Your account was successfully created!");
         }
 
+        // Creating a driver account
         public void RegisterDriver(Driver driver)
         {
             LoadData();
@@ -67,6 +63,7 @@ namespace RideSharingSystem.Services
             Console.WriteLine("Your account was successfully created!");
         }
 
+        //Logging in the user and returning the relevant user type
         public User Login(string email, string password)
         {
             LoadData();
@@ -81,21 +78,21 @@ namespace RideSharingSystem.Services
             if (user.Role == "Passenger")
             {
                 Passenger? passenger = _passengers.FirstOrDefault(p => p.Email == email && p.Password == password);
-                return passenger;
+                return passenger!;
             }
             else
             {
                 Driver? driver = _drivers.FirstOrDefault(d => d.Email == email && d.Password == password);
-                return driver;
+                return driver!;
             }
         }
 
         public void Logout()
         {
-            _currentUser = null;
             Console.WriteLine("Logged out successfully");
         }
 
+        // Saving user data to json files
         public void SaveData()
         {
             string usersString = JsonSerializer.Serialize(_users);
@@ -107,35 +104,60 @@ namespace RideSharingSystem.Services
             File.WriteAllText(_driversFileName, driversString);
         }
 
+        //Loading data from json files
         public void LoadData()
         {
             try
             {
-
                 if (File.Exists(_usersFileName))
                 {
                     string userData = File.ReadAllText(_usersFileName);
-                    _users = JsonSerializer.Deserialize<List<User>>(userData);
+                    _users = JsonSerializer.Deserialize<List<User>>(userData)!;
                 }
-
-
 
                 if (File.Exists(_passengersFileName))
                 {
                     string data = File.ReadAllText(_passengersFileName);
-                    _passengers = JsonSerializer.Deserialize<List<Passenger>>(data);
+                    _passengers = JsonSerializer.Deserialize<List<Passenger>>(data)!;
                 }
 
                 if (File.Exists(_driversFileName))
                 {
                     string data = File.ReadAllText(_driversFileName);
-                    _drivers = JsonSerializer.Deserialize<List<Driver>>(data);
+                    _drivers = JsonSerializer.Deserialize<List<Driver>>(data)!;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public void Deposit(double amount, string email)
+        {
+            LoadData();
+            List<Passenger> result = (from passenger in _passengers
+                                      where passenger.Email == email
+                                      select passenger).ToList();
+            foreach (Passenger passenger in result)
+            {
+                passenger.Wallet += amount;
+            }
+            SaveData();
+        }
+
+        public void UpdateEarnings(string email, double amount)
+        {
+            LoadData();
+            List<Driver> result = (from driver in _drivers
+                                   where driver.Email == email
+                                   select driver).ToList();
+
+            foreach (Driver driver in result)
+            {
+                driver.Earnings += amount;
+            }
+            SaveData();
         }
     }
 }

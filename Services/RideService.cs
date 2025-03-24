@@ -25,10 +25,11 @@ namespace RideSharingSystem.Services
             return _instance;
         }
 
-        public void RequestRide(string passengerEmail, string pickUpLocation, string dropOffLocation)
+        public void RequestRide(string passengerEmail, string pickUpLocation, string dropOffLocation, int kms)
         {
             LoadData();
-            Ride newRide = new Ride(_rides.Count + 1, passengerEmail, pickUpLocation, dropOffLocation, 50.0);
+            double price = 5.50 * kms;
+            Ride newRide = new Ride(_rides.Count + 1, passengerEmail, pickUpLocation, dropOffLocation, price);
             _rides.Add(newRide);
             SaveData();
         }
@@ -36,7 +37,7 @@ namespace RideSharingSystem.Services
         public void AcceptRide(Driver driver, int rideId)
         {
             LoadData();
-            Ride ride = _rides.FirstOrDefault(ride => ride.Id == rideId && !ride.IsCompleted);
+            Ride? ride = _rides.FirstOrDefault(ride => ride.Id == rideId && !ride.IsCompleted);
             if (ride != null && driver.IsAvailable)
             {
                 ride.Driver = driver;
@@ -53,12 +54,14 @@ namespace RideSharingSystem.Services
         public void CompleteRide(int rideId)
         {
             LoadData();
-            Ride ride = _rides.FirstOrDefault(ride => ride.Id == rideId);
+            Ride? ride = _rides.FirstOrDefault(ride => ride.Id == rideId);
+
             if (ride != null && ride.Driver != null)
             {
                 ride.IsCompleted = true;
                 ride.Driver.IsAvailable = true;
                 ride.Driver.Earnings += ride.Price;
+                AuthService.GetInstance().UpdateEarnings(ride.Driver.Email, ride.Price);
                 Console.WriteLine("Ride completed");
                 SaveData();
             }
@@ -99,12 +102,19 @@ namespace RideSharingSystem.Services
 
         public void LoadData()
         {
-
-            if (File.Exists(_fileName))
+            try
             {
-                string data = File.ReadAllText(_fileName);
 
-                _rides = JsonSerializer.Deserialize<List<Ride>>(data);
+                if (File.Exists(_fileName))
+                {
+                    string data = File.ReadAllText(_fileName);
+
+                    _rides = JsonSerializer.Deserialize<List<Ride>>(data)!;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
 
         }

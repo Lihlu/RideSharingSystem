@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\RideSharingSystem\\RideSharingSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\RideSharingSystem.csproj",
       "projectName": "RideSharingSystem",
-      "projectPath": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\RideSharingSystem\\RideSharingSystem.csproj",
+      "projectPath": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\RideSharingSystem.csproj",
       "packagesPath": "C:\\Users\\Lihlumise Njani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\RideSharingSystem\\obj\\",
+      "outputPath": "C:\\Users\\Lihlumise Njani\\Desktop\\C# Project\\RideSharingSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("RideSharingSystem")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8169969096f4ea5586ac22a445ec4fa3c2a50ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9521692bbb48ee1be1a885b84ac4b479d44fb277")]
 [assembly: System.Reflection.AssemblyProductAttribute("RideSharingSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RideSharingSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
